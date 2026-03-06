@@ -1,0 +1,31 @@
+# Güvenlik & Ortam Değişkenleri (BUNLAR ASLA GİTMEMELİ)
+.env
+.env.*
+!.env.example
+
+# PHP Bağımlılıkları (Eğer ileride Composer kullanırsan)
+vendor/
+composer.phar
+
+# Log Dosyaları (Sunucu ve hata kayıtları)
+*.log
+error_log
+php_errors.log
+
+# İşletim Sistemi Dosyaları (Gereksiz çöpler)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Kod Editörü Ayarları (VS Code, PhpStorm vb.)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
