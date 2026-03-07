@@ -39,4 +39,3 @@ try {
     die("Veritabanı bağlantı hatası: " . $e->getMessage());
 }
 ?>
-?>
