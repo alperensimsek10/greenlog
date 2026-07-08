@@ -1,0 +1,146 @@
+/* =========================================
+   GREENLOG ULTRA MODERN UI - v2.5 (Güncellenmiş)
+   ========================================= */
+:root {
+    /* Renk Paleti - Daha Sofistike Tonlar */
+    --brand-dark: #0f172a;       /* Daha derin lacivert */
+    --brand-primary: #10b981;    /* Emerald Green */
+    --brand-primary-glow: rgba(16, 185, 129, 0.15);
+    --brand-success: #059669;
+    --brand-light: #f0fdf4;
+    --bg-color: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    /* Soft Depth Shadow */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', system-ui, sans-serif; 
+}
+
+body { 
+    display: flex; 
+    height: 100vh; 
+    background-color: var(--bg-color); 
+    color: var(--text-main); 
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- SIDEBAR --- */
+.sidebar { 
+    width: 280px; 
+    background-color: var(--brand-dark); 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.05);
+}
+
+.sidebar-header { 
+    padding: 40px 15px; /* Yan boşlukları biraz azalttık */
+    font-size: 24px; 
+    font-weight: 800; 
+    letter-spacing: -0.5px;
+    color: var(--brand-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* LOGOYU ORTALAYAN KRİTİK SATIR */
+    gap: 12px;
+}
+
+/* Menü Linkleri */
+.sidebar-menu { list-style: none; padding: 0 16px; flex-grow: 1; }
+.sidebar-menu li { margin-bottom: 8px; }
+.sidebar-menu a { 
+    display: flex;
+    align-items: center;
+    color: #94a3b8; 
+    text-decoration: none; 
+    padding: 14px 18px; 
+    font-size: 15px; 
+    font-weight: 500; 
+    border-radius: var(--radius-md);
+    transition: 0.25s ease;
+}
+
+.sidebar-menu a i { width: 28px; font-size: 18px; opacity: 0.7; }
+
+.sidebar-menu a:hover { 
+    background: rgba(255,255,255,0.03); 
+    color: var(--white);
+    transform: translateX(4px);
+}
+
+.sidebar-menu a.active { 
+    background: var(--brand-primary); 
+    color: white; 
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3); 
+}
+
+/* --- TOPBAR & CONTENT --- */
+.main-content { flex-grow: 1; display: flex; flex-direction: column; overflow-y: auto; }
+
+.topbar { 
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    padding: 18px 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Kartlar */
+.content-area { padding: 40px; max-width: 1400px; width: 100%; margin: 0 auto; }
+
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- BUTONLAR & ETİKETLER --- */
+.badge { 
+    padding: 6px 14px; 
+    border-radius: 30px; 
+    font-size: 11px; 
+    font-weight: 700; 
+    letter-spacing: 0.5px;
+    background: var(--brand-light);
+    color: var(--brand-success);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.btn-logout { 
+    color: var(--danger); 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    background: #fff5f5;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover { 
+    background: var(--danger);
+    color: white;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}

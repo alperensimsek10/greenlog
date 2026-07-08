@@ -1,0 +1,4 @@
+<Files "whiteshark_security.log">
+    Order Allow,Deny
+    Deny from all
+</Files>
